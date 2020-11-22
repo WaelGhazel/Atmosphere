@@ -31,7 +31,7 @@
         <form name="connexion" method="post" action="login_check.php">
             <div>
                 <label for="user">E-mail</label>
-                <input type="mail" name="user" id="user" size="40" maxlength="50" required autofocus />
+                <input type="email" name="user" id="user" size="40" maxlength="50" required autofocus />
             </div>
             <div>
                 <label for="pass">Password</label>
@@ -86,12 +86,12 @@
             <div>
                 <label for="url">URL</label>
                 <br>
-                <input type="url" name="url" id="url" placeholder="http://www.atmosphereart.company"/>
+                <input type="text" name="url" id="url" placeholder="http://www.atmosphereart.company"/>
             </div>
             <div>
-                <label for="url">Phone Number *</label>
+                <label for="tel">Phone Number *</label>
                 <br>
-                <input type="tel" name="tel" id="tel" placeholder="Numero de tél avec 8 chiffres" maxlength="8" pattern="[0-9]{8}" required/>
+                <input type="text" name="tel" id="tel" placeholder="Numero de tél avec 8 chiffres" maxlength="8" pattern="[0-9]{8}" required/>
             </div>
             <div>
                 <label for="dateN">Birth Date *</label>
