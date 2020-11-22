@@ -198,7 +198,13 @@ footer{
     border-style: none;
     border-radius: 35px;
     text-align: start;
+    transition: ease-out 0.7s box-shadow;
 }
+.message:focus{
+    outline-style: none;
+    box-shadow: 0 0 20px #FF5700;
+}
+
 .icon{
     height: 20px;
     width: 20px;
@@ -351,12 +357,12 @@ form input[type=text] , form input[type=email] , form input[type=password] , for
     border-radius: 25px;
     width: 250px;
     color: #4b4b4b;
-    transition: ease 0.4s border;
+    transition: ease-out 0.4s box-shadow ;
     margin: 4px;
 }
 form input:focus{
     outline-style: none;
-    border: 2px solid #FF5700;
+    box-shadow: 0 0 5px #FF5700;
 }
 .check{
     width: auto;
