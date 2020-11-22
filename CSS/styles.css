@@ -343,19 +343,23 @@ footer{
     transition: transform 0.5s , ease 0.7s color , ease 0.7s border-color;
 }
 
-form input {
-    background-color: #b9b9b9;
-    border: none;
+form input[type=text] , form input[type=email] , form input[type=password] , form input[type=date] {
+    background-color: transparent;
+    border: black;
+    border-style: groove;
+    border-width: 1px;
     border-radius: 25px;
     width: 250px;
     color: #4b4b4b;
+    transition: ease 0.4s border;
+    margin: 4px;
+}
+form input:focus{
+    outline-style: none;
+    border: 2px solid #FF5700;
 }
 .check{
     width: auto;
-}
-form input:active , form input:visited , form input:link{
-    border: #ececec;
-    border-style: groove;
 }
 form input::placeholder{
     color: #6b6b6b;
