@@ -16,6 +16,7 @@
             <ul class="menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="Services-main.html">Services</a></li>
+                <li><a href="About-Us.html">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a class="aabd" href="#top">
                     <svg class="user" xmlns="http://www.w3.org/2000/svg" viewBox="-42 0 512 512.002">
@@ -26,11 +27,11 @@
             </ul>
         </header>
         <div class="pagename">
-            <h1 class="title">Login/Create Account</h1>
+            <h1 class="title"><br><br><br>Login/Create Account</h1>
         </div>
         <h1 class="ta3rif">Login</h1>
         <div class="blassa">
-        <form name="connexion" method="post" action="login_check.php">
+        <form name="connexion" method="get" action="../PHP/login_check.php">
             <div>
                 <label for="user">E-mail</label><br>
                 <input type="email" name="user" id="user" size="40" maxlength="50" required autofocus />
@@ -51,10 +52,10 @@
         <hr>
         <h1 class="ta3rif">Create An Account</h1>
         <div class="blassa">
-        <form name="creation" method="post" action="creation.php">
+        <form name="creation" method="get" action="../PHP/creation.php" onsubmit="return validation()">
             <div>
-            <label for="liste">Sex</label>
-            <select name="s" id="liste" required>
+            <label for="liste">Sex *</label>
+            <select name="sx" id="liste" required>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Other">Other</option>
@@ -66,22 +67,22 @@
                 <input type="text" name="Name" id="Name" required/>
             </div>
             <div>
-                <label for="F.name">Family Name *</label>
+                <label for="F_name">Family Name *</label>
                 <br>
-                <input type="text" name="F.name" id="F.name" required/>
+                <input type="text" name="F_name" id="F.name" required/>
             </div>
             <div>
-                <label for="email">Email</label>
+                <label for="email">Email*</label>
                 <br>
                 <input type="email" name="email" id="email"required/>
             </div>
             <div>
-                <label for="pass1">Password</label>
+                <label for="pass1">Password*</label>
                 <br>
                 <input type="password" name="pass1" id="pass1" required/>
             </div>
             <div>
-                <label for="pass2">Confirm Password?</label>
+                <label for="pass2">Confirm Password?*</label>
                 <br>
                 <input type="password" name="pass2" id="pass2" required/>
             </div>
@@ -93,7 +94,7 @@
             <div>
                 <label for="tel">Phone Number *</label>
                 <br>
-                <input type="text" name="tel" id="tel" placeholder="Numero de tél avec 8 chiffres" maxlength="8" pattern="[0-9]{8}" required/>
+                <input type="text" name="tel" id="tel" placeholder="Phone Number with 8 digits ..." maxlength="8" pattern="[0-9]{8}" required/>
             </div>
             <div>
                 <label for="dateN">Birth Date *</label>
@@ -102,14 +103,14 @@
             </div>
             <div>
                 <input class="check" type="checkbox" name="terms" id="terms" required />
-                <label for="abonne">I agree to the <a href="#">Terms and Conditions</a></label>
+                <label for="abonne">I agree to the <a href="#">Terms and Conditions</a> *</label>
             </div>
             <div>
                 <input class="check" type="checkbox" name="legally" id="legal" required />
-                <label for="biblio">I agree To use this content Legally</label>
+                <label for="biblio">I agree To use this content Legally *</label>
             </div>
             <div>
-                <button class="sob" name="valider" type="submit">Create Account</button>
+                <button class="sob" name="valider" type="submit" onclick="sex(); Name(); Family_Name();" >Create Account</button>
                 <button class="fassakh" name="valider" type="reset">Reset</button>
             </div>
             <div>
@@ -145,6 +146,7 @@
                 </div>
             </div>
         </footer>
+        <script src="../JS/script.js"></script>
 
     </body>
 </html>
